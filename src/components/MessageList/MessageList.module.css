@@ -1,0 +1,18 @@
+.messageItem {
+  list-style-type: none;
+  padding: 15px;
+  background-color: rgb(247, 247, 247);
+  border: 1px solid rgb(189, 189, 189);
+  width: 500px;
+  margin-bottom: 15px;
+}
+
+.messageItem:nth-child(2n) {
+  color: rgb(52, 52, 255);
+  background-color: rgb(209, 209, 209);
+}
+
+.messsagesList {
+  margin: 0;
+  padding: 0;
+}
