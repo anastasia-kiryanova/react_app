@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import styles from './App.module.css';
-import { Form } from './components/Form/Form';
-import { MessageList } from './components/MessageList/MessageList';
+import styles from './App.module.css'
+import { Form } from './components/Form/Form'
+import { MessageList } from './components/MessageList/MessageList'
 import { nanoid } from 'nanoid'
+import { ChatList } from './components/ChatList/ChatList'
+import { Header } from './components/Header/Header'
 
 
 export const App = () => {
@@ -33,10 +35,15 @@ export const App = () => {
   }
 
   return (
-    <div className={styles.app}>
-      <h1 className={styles.header}>Добро пожаловать в чат!</h1>
-      <Form addMessage={addMessage} />
-      <MessageList messages={messages} />
-    </div>
+    <>
+      <Header />
+      <div className={styles.app}>
+        <ChatList />
+        <div className={styles.content}>
+          <Form addMessage={addMessage} />
+          <MessageList messages={messages} />
+        </div>
+      </div>
+    </>
   )
 }

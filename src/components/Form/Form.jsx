@@ -1,23 +1,14 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useRef } from 'react'
 import styles from './Form.module.css'
+import { Button, TextField } from '@mui/material'
 
 export const Form = ({ addMessage }) => {
   const [text, setText] = useState('')
-  const [inputTextDirty, setInputTextDirty] = useState(false)
-  const [textError, setTextError] = useState('Поле не может быть пустым')
-  const [formValid, setFormValid] = useState(false)
-
+  const inputRef = useRef(null);
+  
   useEffect(() => {
-     if(textError) {
-       setFormValid(false)
-     } else {
-       setFormValid(true)
-     }
-   }, [textError])
-
-  const blurHandler = (evt) => {
-    setInputTextDirty(true)
-  }
+      inputRef.current.focus();
+   }, [text])
 
   const  handleText = (evt) => {
     evt.preventDefault()
@@ -30,18 +21,12 @@ export const Form = ({ addMessage }) => {
 
   const inputHandler = (evt) => {
     setText(evt.target.value)
-    if (!evt.target.value) {
-      setTextError('Поле не может быть пустым')
-    } else {
-      setTextError('')
-    }
   }
 
   return (
     <form className={styles.form} onSubmit={handleText}>
-      {(inputTextDirty && textError) && <p className={styles.error}>{textError}</p>}
-      <input type="text" className={styles.input} name="message" value={text} onBlur={evt => blurHandler(evt)} onChange={evt => inputHandler(evt)} placeholder='Введите Ваше сообщение' />
-      <button disabled={!formValid} className={styles.button} type="submit">Отправить</button>
+      <TextField name="message" variant="outlined" label="Введите сообщение" value={text} onChange={evt => inputHandler(evt)} required inputRef={inputRef} sx={{ width: '300px', mr: '30px', }} />
+      <Button type="submit" variant="contained" color="info">Отправить</Button>
     </form>
   )
 }
