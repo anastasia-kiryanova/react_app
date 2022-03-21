@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header test snapshot 1`] = `
+<DocumentFragment>
+  <header
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionSticky css-7e0s21-MuiPaper-root-MuiAppBar-root"
+  >
+    <div
+      class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1t29gy6-MuiToolbar-root"
+    >
+      <div
+        class="MuiTypography-root MuiTypography-h5 css-ag7rrr-MuiTypography-root"
+        data-testid="header-text"
+      />
+    </div>
+  </header>
+</DocumentFragment>
+`;

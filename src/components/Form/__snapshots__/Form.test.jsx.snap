@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form test snapshot 1`] = `
+<DocumentFragment>
+  <form
+    class="form"
+  >
+    <div
+      class="MuiFormControl-root MuiTextField-root css-1xxymz6-MuiFormControl-root-MuiTextField-root"
+    >
+      <label
+        class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary Mui-focused Mui-required css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="true"
+        for="mui-2"
+        id="mui-2-label"
+      >
+        Введите сообщение
+        <span
+          aria-hidden="true"
+          class="MuiInputLabel-asterisk MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+        >
+           *
+        </span>
+      </label>
+      <div
+        class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+      >
+        <input
+          aria-invalid="false"
+          class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+          data-testid="form-input"
+          id="mui-2"
+          name="message"
+          required=""
+          type="text"
+          value=""
+        />
+        <fieldset
+          aria-hidden="true"
+          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+        >
+          <legend
+            class="css-1z7n62"
+          >
+            <span>
+              Введите сообщение *
+            </span>
+          </legend>
+        </fieldset>
+      </div>
+    </div>
+    <button
+      class="MuiButton-root MuiButton-contained MuiButton-containedInfo MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  css-kjirbw-MuiButtonBase-root-MuiButton-root"
+      data-testid="form-button"
+      tabindex="0"
+      type="submit"
+    >
+      Отправить
+      <span
+        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+      />
+    </button>
+  </form>
+</DocumentFragment>
+`;
