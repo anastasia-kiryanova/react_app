@@ -7,13 +7,9 @@ describe('Header', () => {
     expect(Header).toBeInstanceOf(Function);
   });
 
-  it ('test snapshot', () => {
-    const { asFragment } = render(<Header />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-
   it('renders Header component', () => {
-    render(<Header />);
+    const title = 'Добро пожаловать в чат';
+    render(<Header title={title} />);
     expect(screen.getByTestId('header-text')).toBeTruthy();
   });
 });

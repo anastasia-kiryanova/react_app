@@ -19,7 +19,7 @@ describe ('Form', () => {
 
   describe ('functionality', () => {
     beforeEach(() => {
-      render(<Form />);
+      render(<Form addMessage={() => null} />);
     });
 
     it ('input field is empty', () => {
