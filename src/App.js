@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useCallback } from 'react'
 import styles from './App.module.css'
 import { Form } from './components/Form/Form'
 import { MessageList } from './components/MessageList/MessageList'
@@ -9,6 +9,7 @@ import { Header } from './components/Header/Header'
 
 export const App = () => {
   const [messages, setMessages] = useState([]) 
+  const title = 'Добро пожаловать в чат'
 
   useEffect(() => {
     if (messages.length && messages[messages.length-1].author === 'User'){
@@ -23,20 +24,23 @@ export const App = () => {
     }
   }, [messages])
 
-  const addMessage = ({ text, author }) => {
-    setMessages([
-      ...messages, 
-      {
-        id: nanoid(),
-        author,
-        text,
-      },
-    ])
-  }
-
+  const addMessage = useCallback(
+    ({ text, author }) => {
+      setMessages([
+        ...messages, 
+        {
+          id: nanoid(),
+          author,
+          text,
+        },
+      ])
+    },
+    [messages]
+  )
+  
   return (
     <>
-      <Header />
+      <Header title={title} />
       <div className={styles.app}>
         <ChatList />
         <div className={styles.content}>

@@ -32,7 +32,7 @@ export const ChatList = () => {
           mt: '30px',
           padding: '12px',
           color: '#ffffff',
-        }}>
+        }} data-testid='list'>
       {chats.map((item) => (
         <ListItem key={item.id}>
           <ListItemButton>
